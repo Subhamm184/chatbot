@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Chatbot</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Job Eligibility Chatbot</h1>
+      <p>Answer questions to determine your eligibility for the job!</p>
+    </header>
 
+    <div class="form-container">
+      <div class="form-section">
+        <label for="company">Select a Company:</label>
+        <select id="company" class="dropdown">
+          <option value="">--Select Company--</option>
+          <option value="Hyscaler">Hyscaler</option>
+          <option value="Google">Google</option>
+          <option value="Microsoft">Microsoft</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Tesla">Tesla</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label>Choose Your Profession:</label>
+        <div class="radio-group">
+          <input type="radio" id="fresher" name="profession" value="Fresher">
+          <label for="fresher">Fresher</label>
+
+          <input type="radio" id="experienced" name="profession" value="Experienced">
+          <label for="experienced">Experienced</label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label for="skills">Enter Your Key Skills:</label>
+        <input type="text" id="skills" placeholder="e.g., Python, Java, SQL" class="input-box">
+      </div>
+
+      <button id="startQuiz" class="btn">Start Quiz</button>
+    </div>
+
+    
+    <div id="quizContainer" class="quiz-container hidden">
+      <h2>Quiz Section</h2>
+      <div id="questions"></div>
+      <div class="navigation-buttons">
+        <button id="prevQuestion" class="btn hidden">Previous</button>
+        <button id="nextQuestion" class="btn hidden">Next</button>
+      </div>
+    </div>
+
+
+    <div id="resultContainer" class="result-container hidden">
+      <h2>Quiz Result</h2>
+      <p id="resultMessage"></p>
+      <button id="applyNow" class="btn hidden">Apply Now</button>
+    </div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
